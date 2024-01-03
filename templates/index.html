@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Recognition</title>
+    <style>
+      body {
+        background-image: url("{{url_for('static', filename= 'background.jpg')}}");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      h1 {
+        color: #f2f2f2;
+        font-size: 64px;
+      }
+
+      form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      input[type="file"] {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 2px solid #3498db;
+        border-radius: 5px;
+        background-color: #ecf0f1;
+        color: #3498db;
+        cursor: pointer;
+        width: 250px;
+      }
+
+      input[type="file"]:hover {
+        background-color: #bdc3c7;
+      }
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #3498db;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Attendance System</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".jpg, .jpeg, .png" required />
+      <button type="submit">Upload</button>
+    </form>
+  </body>
+</html>

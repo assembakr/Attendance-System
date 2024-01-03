@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Face Recognition Result</title>
+    <style>
+      body {
+        background-image: url("{{url_for('static', filename= 'background.jpg')}}");
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: "Arial", sans-serif;
+        background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #3498db;
+        color: #fff;
+      }
+
+      tr:nth-child(even) {
+        background-color: rgba(242, 242, 242, 0.6);
+      }
+
+      tr:nth-child(odd) {
+        background-color: #f2f2f2;
+      }
+
+      p {
+        margin-top: 20px;
+      }
+
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Detected IDs and Names</h1>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+      </tr>
+      {% for id, name in ids_names %}
+      <tr>
+        <td>{{ id }}</td>
+        <td>{{ name }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <p>
+      Worksheet URL:
+      <a href="{{ worksheet_url }}" target="_blank">{{ worksheet_url }}</a>
+    </p>
+  </body>
+</html>
