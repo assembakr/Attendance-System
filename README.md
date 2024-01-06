@@ -6,17 +6,33 @@ A computer vision-based project designed to recognize and identify individuals b
 
 ## Running the Project
   
-1. Clone this Repo:
+### 1. Clone this Repo:
   ```
   git clone https://github.com/MariamAmy/Students-Attendance-System
   ```
 
-2. Install the required dependencies:
+
+### 2. Install the required dependencies:
   ```python
   pip install -r requirements.txt
   ```
 
 
-3. Enjoy the Application:
-- The ```application.py``` file manages all app pages.
+### 3. Hosting the Application
+To host the application and make it accessible online, we used ngrok. Follow the steps below:
+- Install ngrok:
+  ```
+  npm install ngrok -g
+  ```
+- Run the Flask  application:
+  ```
+  python app.py
+  ```
+- In a separate terminal, run ngrok to expose the local server:
+  ```
+  ngrok http 5000
+  ```
+
+### 4. Enjoy the Application:
+- The ```app.py``` file manages all app pages.
 - Start enjoying the grocery shop application!
