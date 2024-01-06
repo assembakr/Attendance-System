@@ -46,8 +46,5 @@ To host the application and make it accessible online, we used ngrok. Follow the
 - Access the Google Sheets spreadsheet to view the real-time attendance data.
 - The spreadsheet is automatically updated as students are recognized by the system.
 
-### 7. Contribute and Share:
-- Feel free to contribute to the project by submitting pull requests or reporting issues.
+### Feel free to contribute to the project by submitting pull requests or reporting issues!
 
-
-## Now, you are all set to use and explore the Students Attendance System!
